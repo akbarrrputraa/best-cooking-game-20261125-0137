@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Hearth &amp; Ladle — a tiny cooking game</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #2b1a10; }
+  body { font-family: "Trebuchet MS", "Segoe UI", Verdana, sans-serif; color: #fff6e6; }
+  #wrap { width: 1280px; max-width: 100vw; margin: 0 auto; padding: 12px 0 24px; }
+  canvas { display: block; width: 1280px; max-width: 100%; height: auto; background: #e8b06a; border-radius: 10px; }
+  .bar { display: flex; gap: 12px; align-items: center; margin-top: 10px; flex-wrap: wrap; }
+  .bar button { font: 700 14px "Trebuchet MS", sans-serif; color: #3a2415; background: #ffd34d; border: 0; border-radius: 8px; padding: 8px 14px; cursor: pointer; }
+  .bar button:hover { background: #ffe08a; }
+  .bar p { margin: 0; font-size: 14px; color: #ffd9a8; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="1280" height="800"></canvas>
+  <div class="bar">
+    <button id="mute" type="button">Mute (M)</button>
+    <button id="restart" type="button">Restart shift</button>
+    <p>Move with WASD or arrows &middot; E or Space to use a station (hold E to chop) &middot; keys 1&ndash;7 pick pantry ingredients &middot; click a station to walk over and use it.</p>
+  </div>
+  <div class="bar">
+    <p>Serve tickets from the order board before their patience bars run out. Chop at the board, cook on the stove or grill, build the dish on the plating counter, serve at the window. Tips shrink as patience fades; the last 30 seconds are the dinner rush.</p>
+  </div>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
